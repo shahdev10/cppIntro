@@ -32,11 +32,11 @@ int main() {
     cin >> animal;
     cin >> petName;
 
-    cout << "There once was a person named " << name << " who lived in the city of "
-    << city << ".\nAt the age of " << age << ", " << name << " went to college at "
-    << college << ".\n" << name << " graduated and went to work as " << profession 
-    << ".\nThen " << name <<" adopted a/n " << animal << " named " << petName
-    << ".\nThey both lived happily ever after." ;
+    cout << "There once was a person named " << name << " who lived in the city of " << city << "." << endl;
+    cout << "At the age of " << age << ", " << name << " went to college at " << college << "." << endl;
+    cout << name << " graduated and went to work as " << profession << "." << endl;
+    cout << "Then " << name <<" adopted a/n " << animal << " named " << petName << "." << endl;
+    cout << "They both lived happily ever after." << endl;
     return 0;
     
     
