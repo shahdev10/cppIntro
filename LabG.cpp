@@ -1,9 +1,7 @@
-/* Create a file named numbers.txt containing numbers each written on a separate line. Assume there are up to 10 numbers in the file. The program should read the contents of the file into an array and then display the following data:
-
-• The smallest number in the array
-• The largest number in the array
-• The total of the numbers in the array
-• The average of the numbers in the array
+/* Lowest Number = 2
+Highest Number = 144
+Total = 160
+Average = 40
 */
 
 #include<iostream>
@@ -12,17 +10,18 @@
 
 using namespace std;
 
+double sumFunc(vector<double> arr, int arrSize); 
+
 int main()
 {
     vector<double> numbers;
     ifstream inputFile;
 
 
-    inputFile.open(/Users/shahfamily/git/cppIntro/numbers.txt);
+    inputFile.open("/Users/shahfamily/git/cppIntro/numbers.txt");
 
     if (inputFile)
     {
-        // cout << "Valid file." << endl;
 
         int file_number;
 
@@ -50,13 +49,22 @@ int main()
     cout << "Highest Number = " << highest_number << endl;
 
 
-    double total = 0;
-    for (int i = 0; i < numbers.size(); i++)
-        total += numbers[i];
-    cout << "Total = " << total << endl;
+    int size = numbers.size();
+    double total;
+    total = sumFunc(numbers, size);
 
-    double average = total / numbers.size();
+    double average = total / size;
     cout << "Average = " << average << endl;
 
     return 0;
 }
+
+double sumFunc(vector<double> arr, int arrSize) {
+    double total = arr[0];
+    for (int i = 1; i < arrSize; i++) {
+        total += arr[i];    
+    }
+    cout << "Total = " << total << endl;
+    return total;
+}
+
