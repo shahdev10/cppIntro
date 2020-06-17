@@ -26,12 +26,12 @@ int main () {
     cin >> color2;
     cout << endl;
 
-    if (color1 == "red" || color1 == "Red"){
+    if (color1 == "red" || color1 == "Red") {
         // test comment
-        if (color2 == "blue" || color2 == "Blue"){
+        if (color2 == "blue" || color2 == "Blue") {
             cout << "When you mix red and blue, you get purple!\n";
         }
-        else if (color2 == "yellow" || color2 == "Yellow"){
+        else if (color2 == "yellow" || color2 == "Yellow") {
             cout << "When you mix red and yellow, you get orange!\n";
         }
     }
@@ -39,19 +39,19 @@ int main () {
         if (color2 == "red" || color2 == "Red") {
             cout << "When you mix blue and red, you get purple!\n";
             }
-        else if (color2 == "yellow" || color2 == "Yellow"){
+        else if (color2 == "yellow" || color2 == "Yellow") {
             cout << "When you mix blue and yellow, you get green!\n";
             }
     }
-    else if (color1 == "yellow" || color1 == "Yellow"){
-        if (color2 == "red" || color2 == "Red"){
+    else if (color1 == "yellow" || color1 == "Yellow") {
+        if (color2 == "red" || color2 == "Red") {
             cout << "When you mix yellow and red, you get orange!\n";
             }
-        else if (color2 == "blue" || color2 == "Blue"){
+        else if (color2 == "blue" || color2 == "Blue") {
             cout << "When you mix yellow and blue, you get green!\n";
             }
         }
-    else if (color1 == color2){
+    else if (color1 == color2) {
         cout << "When you mix " << color1 << " and " << color2 << ", you get " << color1 << "!\n";
         }
     else {
