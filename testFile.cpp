@@ -1,55 +1,65 @@
-/*Write complete C++ code for a program that defines and calls a function displayPattern that displays the following pattern. Function displayPattern should take one parameter/argument of type int that specifies the number of lines to print in the pattern below and it returns nothing.  Call displayPattern(5) from main to print the following pattern. 
+/* Write complete C++ code to display numbers larger than n in an array. In your code, write a function that accepts three arguments: an array, the size of the array, and a number n . Assume that the array contains integers. Call the function in your code. The function should display all of the numbers in the array that are greater than the number n . You could use a named constant for the value of n or collect it from the user.
 
-+
-++
-+++
-++++
-+++++
+Sample output is:
 
-#include <iostream>
+Numbers greater than 4 in the array are: 5, 17, 10, 12
+
+
+
+#include<iostream>
 using namespace std;
 
-void displayPattern(int);
+// function prototype here
+void compareFunc(int arr[5], int arrSize, int userInp);
 
-int main (){
-    cout<< "Enter the number of times you want the pattern to be displayed: \n";
-    int input;
-    cin >> input;
+int main() {
+    int user; 
+    cout << "Enter a number of your choice: " << endl;
+    cin >> user;
     cout << endl;
-    displayPattern(input);
+    int arr[5] = {10, 2, 4, 82, 23};
+    int size = sizeof(arr)/sizeof(arr[0]);
+    compareFunc(arr, size, user);
 }
 
-void displayPattern(int x){
-    int i = 1;
-    int j = 1;
-    while (i <= x){
-        for (int y = 0; y == i; y++){
-            cout << "+";
-        } 
-        cout << endl;
-        i++;
-
+void compareFunc(int arr[5], int arrSize, int userInp){
+    //cout << arrSize << endl << userInp << endl;
+    cout << "Numbers greater than " << userInp << " in the array are: " << endl;
+    for(int i = 0; i < 5; i++){
+        if (arr[i] > userInp){
+            cout << arr[i] << endl;
+        }
     }
 }
+*/
 
-#include <iostream> using namespace std; void displayPattern(int);int main (){cout<< "Enter the number of times you want the pattern to be displayed: \n";int input;cin >> input;cout << endl;displayPattern(input);}void displayPattern(int x){for (int i = 0; i<x; i++){for (int j = 0; j <=i, j++){cout << "+";}cout << endl;}}*/
+#include<iostream>
+#include<ctime>
+#include<cstdlib>
 
-#include <iostream>
-using namespace std;
-int main()
-{
-    char asciiCodeNumber;
+using namespace std; 
 
-    for (int i = 0; i <= 127; i++)
-    {
-        asciiCodeNumber = i;
-        cout << asciiCodeNumber << " ";
-
-        if (i % 16 == 0)
-            cout << endl;
-    }
-    cout << endl
-         << endl;
-
-    return 0;
+int main(){
+    string magic8arr[12] = {
+        "Yes, of course!",
+        "Without a doubt, yes.",
+        "You can count on it.",
+        "For sure!",
+        "Ask me later.",
+        "I'm not sure.",
+        "I can't tell you right now.",
+        "I'll tell you afterwards.",
+        "No way!",
+        "I don't think so.",
+        "Without a doubt, no.",
+        "The answer is clearly, NO."
+    };
+    cout << "Feeling lucky? Ask a question:" << endl;
+    string question; 
+    cin >> question;
+    cout << endl;
+    unsigned seed = time(0);
+    srand(seed);
+    int i = (rand() % (12 - 1 + 1)) + 1;
+    cout << magic8arr[i] << endl;
 }
