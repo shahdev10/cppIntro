@@ -18,7 +18,7 @@ int main()
     ifstream inputFile;
 
 
-    inputFile.open("/Users/shahfamily/git/cppIntro/numbers.txt");
+    inputFile.open("./numbers.txt");
 
     if (inputFile)
     {
