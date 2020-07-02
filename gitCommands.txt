@@ -8,3 +8,9 @@ General commands
 ==============
 git status
 git log
+
+Add Repository
+================
+which git
+
+git clone (Paste link)
