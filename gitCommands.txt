@@ -13,4 +13,6 @@ Add Repository
 ================
 which git
 
+***go to git folder***
+
 git clone (Paste link)
